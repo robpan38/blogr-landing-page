@@ -3,3 +3,224 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    /* primary */
+    --lightRed: hsl(356, 100%, 66%); /* btn text color */
+    --veryLightRed: hsl(355, 100%, 74%); /* btn background-color when hovered */
+    --veryDarkBlue: hsl(208, 49%, 24%); /* headings */
+
+    /* neutral */
+    --grayishBlue: hsl(240, 2%, 79%); /* footer text color */
+    --veryDarkGrayishBlue: hsl(207, 13%, 34%); /* body copy */
+    --veryDarkBlackBlue: hsl(240, 10%, 16%); /* footer background */
+
+    /* gradient */
+    /* gradient 1 */
+    --gradient1color1: hsl(13, 100%, 72%);
+    --gradient1color2: hsl(353, 100%, 62%);
+
+    /* gradient 2 */
+    --gradient2color1: hsl(237, 17%, 21%);
+    --gradient2color2: hsl(237, 23%, 32%);
+
+    /* fonts */
+    --font1: 'Overpass';
+    --font2: 'Ubuntu';
+    font-family: var(--font2, 'sans-serif');
+}
+
+body, html {
+    height: 200vh;
+    width: 100%;
+}
+
+header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("images/bg-pattern-intro.svg"), linear-gradient(to right, var(--gradient1color1), var(--gradient1color2));
+    background-repeat: no-repeat;
+    background-size: 140% 600%;
+    background-position: center;
+
+    border-radius: 0 0 0 15vh;
+}
+
+nav {
+    height: 20%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 0% 3% 0%;
+}
+
+.leftSide {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    column-gap: 5%;
+}
+
+.logo {
+    height: 100%;
+    width: 15%;
+    background-image: url("images/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.product, .company, .connect {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.preview {
+    width: 100%;
+    display: flex;
+}
+
+.preview p {
+    width: 70%;
+    font-size: max(1rem, 1vw);
+    font-weight: 500;
+    color: white;
+    opacity: 0.7;
+}
+
+.preview p:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.list {
+    position: absolute;
+    height: 150%;
+    width: 110%;
+    top: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 2vh;
+    padding-left: 10%;
+
+    opacity: 0;
+}
+
+.list p {
+    font-size: max(0.9rem, 0.9vw);
+}
+
+.list p:hover {
+    font-weight: 500;
+}
+
+.preview .arrow {
+    width: 20%;
+    background-image: url("images/icon-arrow-light.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 60%;
+}
+
+.arrowActivated {
+    transform: scaleY(-1);
+}
+
+.title {
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(3rem, 3vw);
+    font-weight: 600;
+    color: white;
+    margin: 0.5% 0%;
+}
+
+.description {
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(1.2rem, 1.2vw);
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 2%;
+}
+
+.headerBtns {
+    height: 13%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 2%;
+}
+
+.headerBtns button {
+    width: 12%;
+    font-family: var(--font2, 'sans-serif');
+    font-size: max(1rem, 1vw);
+    font-weight: 700;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: white;
+}
+
+.startBtn {
+    background-color: white;
+    color: var(--lightRed);
+}
+
+.startBtn:hover, .signupBtn:hover {
+    color: white;
+    background-color: var(--veryLightRed);
+    border-color: var(--veryLightRed);
+    cursor: pointer;
+}
+
+.learnBtn {
+    background-color: transparent;
+    color: white;
+}
+
+.learnBtn:hover {
+    color: var(--lightRed);
+    background-color: white;
+    cursor: pointer;
+}
+
+.rightSide {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginBtn {
+    height: 60%;
+    width: 35%;
+    font-family: var(--font2, 'sans-serif');
+    font-size: max(1rem, 1vw);
+    font-weight: 700;
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    opacity: 0.7;
+}
+
+.signupBtn {
+    height: 60%;
+    width: 50%;
+    font-family: var(--font2, 'sans-serif');
+    font-size: max(1rem, 1vw);
+    font-weight: 700;
+    color: var(--lightRed);
+    border-radius: 25px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+}

@@ -6,39 +6,79 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | [Blogr]</title>
-
+  
 </head>
 <body>
-  Product
+  <header>
+    <nav>
+      <div class="leftSide">
+        <div class="logo"></div>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+        <div class="product" onclick="handleProductClick()">
+          <div class="preview">
+            <p>Product</p>
+            <div class="arrow"></div>
+          </div>
 
-  Company
+          <div class="list">
+            <p>Overview</p>
+            <p>Pricing</p>
+            <p>Marketplace</p>
+            <p>Features</p>
+            <p>Integrations</p>
+          </div>
+        </div>
 
-  About
-  Team
-  Blog
-  Careers
+        <div class="company" onclick="handleCompanyClick()">
+          <div class="preview">
+            <p>Company</p>
+            <div class="arrow"></div>
+          </div>
 
-  Connect
+          <div class="list">
+            <p>About</p>
+            <p>Team</p>
+            <p>Blog</p>
+            <p>Careers</p>
+          </div>
+        </div>
 
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
+        <div class="connect" onclick="handleConnectClick()">
+          <div class="preview">
+            <p>Connect</p>
+            <div class="arrow"></div>
+          </div>
 
-  A modern publishing platform
-  Grow your audience and build your online brand
+          <div class="list">
+            <p>Contact</p>
+            <p>Newsletter</p>
+            <p>LinkedIn</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="rightSide">
+        <button class="loginBtn">Login</button>
+        <button class="signupBtn">Sign Up</button>
+      </div>
 
-  Start for Free
-  Learn More
+      <div class="productActive" style="display: none;">0</div>
+      <div class="companyActive" style="display: none;">0</div>
+      <div class="connectActive" style="display: none;">0</div>
+    </nav>
+
+    <p class="title">A modern publishing platform</p>
+    <p class="description">Grow your audience and build your online brand</p>
+
+    <div class="headerBtns">
+      <button class="startBtn">Start for Free</button>
+      <button class="learnBtn">Learn More</button>
+    </div>
+  </header>
 
   Designed for the future
 
