@@ -449,6 +449,7 @@ footer {
     }
 
     header {
+        height: 60vh;
         position: relative;
         row-gap: 25px;
     }
@@ -556,7 +557,7 @@ footer {
     }
 
     .editor {
-        height: 90vh;
+        height: 125vh;
         justify-content: space-between;
         background-image: url("images/illustration-editor-mobile.svg");
         background-size: 100% 40%;
@@ -577,6 +578,7 @@ footer {
         width: 100%;
         align-items: center;
         justify-content: space-between;
+        text-align: center;
     }
 
     .editorArt {
@@ -614,6 +616,7 @@ footer {
     }
 
     .advantages {
+        height: 95vh;
         justify-content: center;
         align-items: flex-end;
         background-image: url("images/illustration-laptop-mobile.svg");
@@ -622,7 +625,7 @@ footer {
     }
 
     .advantagesText {
-        width: 80%;
+        width: 100%;
         margin-right: 0;
         text-align: center;
         justify-content: space-between;
