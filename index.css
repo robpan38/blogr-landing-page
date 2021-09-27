@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 200ms linear;
 }
 
 :root {
@@ -86,6 +87,7 @@ nav {
 .preview {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .preview p {
@@ -133,7 +135,7 @@ nav {
 }
 
 .arrowActivated {
-    transform: scaleY(-1);
+    transform: scaleY(-1) !important;
 }
 
 .title {
@@ -223,4 +225,432 @@ nav {
     border-color: white;
     border-style: solid;
     background-color: white;
+}
+
+.editor {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("images/illustration-editor-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 45% 100%;
+    background-position: 100% 40%;
+}
+
+.title2 {
+    height: 10%;
+    text-align: center;
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(1.4rem, 1.4vw);
+    font-weight: 600;
+    color: var(--veryDarkBlue);
+}
+
+.editorWrapper {
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.editorText {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.editorParagraph {
+    height: 45%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10%;
+}
+
+.editorTitle {
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(1.2rem, 1.2vw);
+    font-weight: 600;
+    color: var(--veryDarkBlue);
+}
+
+.editorDescription {
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(0.85rem, 0.85vw);
+    font-weight: 600;
+    color: var(--veryDarkGrayishBlue);
+}
+
+.editorArt {
+    height: 100%;
+    width: 50%;
+}
+
+.infrastructure {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.phones {
+    height: 130%;
+    width: 30%;
+    position: absolute;
+    top: -10%;
+    left: 7%;
+    z-index: 4;
+}
+
+.infrastructureWrapper {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0 15vh 0 15vh;
+    background-image: linear-gradient(to right, var(--gradient2color1), var(--gradient2color2));
+    position: relative;
+    overflow: hidden;
+}
+
+.circles {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background-image: url("images/bg-pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 130%;
+    left: 5%;
+    top: -10%;
+}
+
+.infrastructureText {
+    width: 35%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5%;
+}
+
+.infrastructureTitle {
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(1.5rem, 1.5vw);
+    font-weight: 600;
+    color: white;
+}
+
+.infrastructureDescription {
+    font-family: var(--font1, 'sans-serif');
+    font-size: max(0.8rem, 0.8vw);
+    color: white;
+    opacity: 0.7;
+    line-height: 160%;
+}
+
+.advantages {
+    height: 80vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: url("images/illustration-laptop-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 45% 100%;
+    background-position: left center;
+}
+
+.advantagesText {
+    height: 70%;
+    width: 40%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    column-gap: 7%;
+    background-color: var(--veryDarkBlackBlue);
+    border-radius: 0 15vh 0 0;
+    color: white;
+}
+
+.logoFooter {
+    height: 70%;
+    width: 10%;
+    background-image: url("images/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin-left: 10%;
+}
+
+.productFooter {
+    height: 70%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3%;
+}
+
+.footerPreview {
+    font-size: max(1rem, 1vw);
+    margin-bottom: 5%;
+}
+
+.footerContent {
+    font-size: max(1.2rem, 1.vw);
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 1050px) {
+    .preview .arrow {
+        transform: scaleY(1);
+    }
+
+    nav {
+        opacity: 1 !important;
+    }
+
+    .navMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .logo {
+        display: none;
+    }
+
+    .navMobile {
+        display: block;
+        height: 10%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1% 0% 3% 0%;
+    }
+
+    .mobileLogo {
+        height: 80%;
+        width: 15%;
+    }
+    
+    .hamburger {
+        height: 60%;
+        width: 5%;
+    }
+
+    header {
+        position: relative;
+        row-gap: 25px;
+    }
+
+    nav {
+        opacity: 0;
+        height: auto;
+        margin: 0;
+        position: absolute;
+        top: 15%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        row-gap: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px #585858;
+        z-index: 4;
+    }
+
+    .leftSide {
+        width: 90%;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 10px;
+        padding-top: 10px;
+    }
+
+    .product, .company, .connect {
+        width: 100%;
+        row-gap: 10px;
+    }
+
+    .preview p {
+        font-size: 1rem;
+        display: block;
+        width: 20%;
+        color: var(--veryDarkBlue);
+        opacity: 1;
+    }
+
+    .list p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--veryDarkBlue);
+        opacity: 0.8;
+    }
+
+    .preview .arrow {
+        width: 5%;
+        background-image: url("images/icon-arrow-dark.svg");
+        background-size: 50% 50%;
+        transform: scaleY(1);
+    }
+
+    .list {
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        position: static;
+        opacity: 1 !important;
+        padding-left: 0;
+        align-items: center;
+        row-gap: 5px;
+        background-color: hsl(240, 2%, 90%);
+    }
+
+    .listActivated {
+        height: auto;
+        padding: 5px 0px;
+    }
+
+    .loginBtn {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--veryDarkBlue);
+        opacity: 1;
+    }
+
+    .signupBtn {
+        font-size: 1rem;
+        background-image: linear-gradient(to right, var(--gradient1color1), var(--gradient1color2));
+        color: white;
+    }
+
+    .rightSide {
+        width: 90%;
+        padding-bottom: 10px;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .headerBtns button {
+        width: 25%;
+    }
+
+    .editor {
+        height: 90vh;
+        justify-content: space-between;
+        background-image: url("images/illustration-editor-mobile.svg");
+        background-size: 100% 40%;
+        background-position: center 5%;
+    }
+
+    .title2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .editorWrapper {
+        height: 60%;
+    }
+
+    .editorText {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .editorArt {
+        width: 0;
+    }
+
+    .infrastructure {
+        height: 50vh;
+    }
+
+    .phones {
+        width: 40%;
+        height: 40%;
+        left: 25%;
+    }
+
+    .infrastructureWrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circles {
+        top: -60%;
+        left: 20%;
+        z-index: 1;
+    }
+
+    .infrastructureText {
+        height: 50%;
+        width: 80%;
+        margin-top: 10%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .advantages {
+        justify-content: center;
+        align-items: flex-end;
+        background-image: url("images/illustration-laptop-mobile.svg");
+        background-size: 100% 40%;
+        background-position: center -5%;
+    }
+
+    .advantagesText {
+        width: 80%;
+        margin-right: 0;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer {
+        height: auto;
+        flex-direction: column;
+        column-gap: 0;
+    }
+
+    .logoFooter {
+        height: 40px;
+        width: 200px;
+        margin-left: 0;
+        background-position: center;
+        background-size: contain;
+        margin: 25px 0px;
+    }
+
+    .productFooter {
+        height: 20%;
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+    .productFooter p {
+        text-align: center;
+    }
 }

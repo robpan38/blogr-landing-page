@@ -14,6 +14,10 @@
 </head>
 <body>
   <header>
+    <div class="navMobile">
+      <img class="mobileLogo" src="images/logo.svg">
+      <img class="hamburger" src="images/icon-hamburger.svg" onclick="handleHamburgerClick()">
+    </div>
     <nav>
       <div class="leftSide">
         <div class="logo"></div>
@@ -67,8 +71,12 @@
       </div>
 
       <div class="productActive" style="display: none;">0</div>
+      <div class="productActiveMobile" style="display: none;">0</div>
       <div class="companyActive" style="display: none;">0</div>
+      <div class="companyActiveMobile" style="display: none;">0</div>
       <div class="connectActive" style="display: none;">0</div>
+      <div class="connectActiveMobile" style="display: none;">0</div>
+      <div class="hamburgerActive" style="display: none;">0</div>
     </nav>
 
     <p class="title">A modern publishing platform</p>
@@ -86,7 +94,7 @@
     <div class="editorWrapper">
       <div class="editorText">
         <div class="editorParagraph">
-          <p clsas="editorTitle">
+          <p class="editorTitle">
             Introducing an extensible editor
           </p>
           <p class="editorDescription">
@@ -111,45 +119,76 @@
     </div>
   </div>
 
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-  </p>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="infrastructure">
+    <img src="images/illustration-phones.svg" alt="phone" class="phones">
+    <div class="infrastructureWrapper">
+      <div class="circles"></div>
+      <div class="infrastructureText">
+        <div class="infrastructureTitle">
+          State of the Art Infrastructure
+        </div>
+        <div class="infrastructureDescription">
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="advantages">
+    <div class="advantagesText">
+      <div class="editorParagraph">
+        <p class="editorTitle">
+          Free, open, simple
+        </p>
+        <p class="editorDescription">
+          Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+      </div>
+
+      <div class="editorParagraph">
+        <p class="editorTitle">
+          Powerful tooling
+        </p>
+        <p class="editorDescription">
+          Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+          capable of producing even the most complicated sites.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="logoFooter"></div>
+    <div class="productFooter">
+      <p class="footerPreview">Product</p>
+
+      <p class="footerContent">Overview</p>
+      <p class="footerContent">Pricing</p>
+      <p class="footerContent">Marketplace</p>
+      <p class="footerContent">Features</p>
+      <p class="footerContent">Integrations</p>
+    </div>
+
+    <div class="productFooter">
+      <p class="footerPreview">Company</p>
+
+      <p class="footerContent">About</p>
+      <p class="footerContent">Team</p>
+      <p class="footerContent">Blog</p>
+      <p class="footerContent">Careers</p>
+    </div>
+
+    <div class="productFooter">
+      <p class="footerPreview">Connect</p>
+    
+      <p class="footerContent">Contact</p>
+      <p class="footerContent">Newsletter</p>
+      <p class="footerContent">LinkedIn</p>
+    </div>
+  </footer>
   <script src="index.js"></script>
 </body>
 </html>
